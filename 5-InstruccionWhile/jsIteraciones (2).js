@@ -1,9 +1,9 @@
 function Mostrar()
 {
 	var contador = 10;
-	while (contador >= 1)
+	while (contador > 0)
 	{
-		alert(contador);
+		document.write("<br>" + contador)
 		contador--;
 	}	
 

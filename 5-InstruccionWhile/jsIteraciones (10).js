@@ -46,13 +46,13 @@ function Mostrar()
 	promedioNegativos = negativos / contadorNegativos;
 	diferencia = positivos - negativos;
 
-	document.writeln("Suma de los negativos: " + negativos);
-	document.writeln("Suma de los positivos: " + positivos);
-	document.writeln("Cantidad de positivos: " + contadorPositivos);
-	document.writeln("Cantidad de negativos: " + contadorNegativos);
-	document.writeln("Cantidad de ceros: " + contadorCeros);
-	document.writeln("Cantidad de numeros pares: " + contadorPares);
-	document.writeln("Promedio de los positivos: " + promedioPositivos);
-	document.writeln("Promedio de los negativos: " + promedioNegativos);
-	document.writeln("Diferencia entre positivos y negativos: " + diferencia);
+	document.write("Suma de los negativos: " + negativos);
+	document.write("<br>" +"Suma de los positivos: " + positivos);
+	document.write("<br>" +"Cantidad de positivos: " + contadorPositivos);
+	document.write("<br>" +"Cantidad de negativos: " + contadorNegativos);
+	document.write("<br>" +"Cantidad de ceros: " + contadorCeros);
+	document.write("<br>" +"Cantidad de numeros pares: " + contadorPares);
+	document.write("<br>" +"Promedio de los positivos: " + promedioPositivos);
+	document.write("<br>" +"Promedio de los negativos: " + promedioNegativos);
+	document.write("<br>" +"Diferencia entre positivos y negativos: " + diferencia);
 }

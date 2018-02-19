@@ -1,9 +1,11 @@
 function Mostrar()
 {
-	var contador = 1;
-	while(contador <= 10)
+	var contador = 0;
+	
+	while(contador < 10)
 	{
-		alert(contador);
 		contador++;
+		document.write("<br>" + contador);
+		
 	}	
-}//FIN DE LA FUNCIÓN
+}
