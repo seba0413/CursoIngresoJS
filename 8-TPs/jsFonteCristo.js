@@ -8,30 +8,23 @@ d.	Se pedirán un número positivo y se mostrará si el número es un número pr
 e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos desde el número ingresado hasta el cero.
 */
 
-
+//var respuesta = "si";
+var num;
+var numero;
 
 function ComenzarIngreso () 
 {
-	var respuesta = "si";
-	var num;
-	var numero;
-	var cantidadDeImpares;
-
-	while (respuesta != "no")
-	{
-		num = prompt("Ingrese un numero positivo: ");
-		numero = parseInt(num);
- 	
-	}
+	num = document.getElementById('numero').value;
+	numero = parseInt(num);
 }
 
 
 function NumerosPares()
 {
-	var respuesta = "si";
+	/*var respuesta = "si";
 	var num;
 	var numero;
-	var cantidadDePares;
+	var cantidadDePares;*/
 
 	/*while(respuesta != "no")
 	{
@@ -53,8 +46,12 @@ function NumerosPares()
 		respuesta = prompt("¿Desea ingresar otro numero?");
 	}*/
 
-	num = document.getElementById('numero').value;
-	numero = parseInt(num);
+	//num = document.getElementById('numero').value;
+	//numero = parseInt(num);
+
+	ComenzarIngreso();
+
+	var cantidadDeImpares;
 
 	if (numero % 2 == 0) 
 	{
