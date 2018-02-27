@@ -21,82 +21,120 @@ function ComenzarIngreso ()
 
 function NumerosPares()
 {
-	/*var respuesta = "si";
-	var num;
-	var numero;
-	var cantidadDePares;*/
-
-	/*while(respuesta != "no")
-	{
-		num = prompt("Ingrese un numero positivo");
-		numero = parseInt (num);
-
-		if (numero % 2 == 0) 
-		{
-			cantidadDePares = numero / 2;
-		}
-
-		else
-		{
-			cantidadDePares = (numero - 1) / 2;
-		}
-
-		document.getElementById('numero').value = "Cantidad de pares: " + cantidadDePares;
-		//alert("Cantidad de numeros pares: " + cantidadDePares);
-		respuesta = prompt("¿Desea ingresar otro numero?");
-	}*/
-
-	//num = document.getElementById('numero').value;
-	//numero = parseInt(num);
+	var contadorDePares = 0;
 
 	ComenzarIngreso();
-
-	var cantidadDeImpares;
-
-	if (numero % 2 == 0) 
+	while(num > 0)
 	{
-		cantidadDePares = numero / 2;
+		if (num % 2 == 0) 
+		{
+			contadorDePares++;
+		}
+
+		num--;
 	}
 
-	else
-	{
-		cantidadDePares = (numero - 1) / 2;
-	}
-
-	alert("Cantidad de numeros pares: " + cantidadDePares);
+	alert("La cantidad de numeros pares es: " + contadorDePares);
 }
 
 function NumerosImpares() 
 {
-	var respuesta = "si";
-	var num;
-	var numero;
-	var cantidadDeImpares;
+	var contadorDeImpares = 0;
 
-	while (respuesta != "no")
+	ComenzarIngreso();
+	while(num > 0)
 	{
-		num = prompt("Ingrese un numero positivo: ");
-		numero = parseInt(num);
-
-		if (numero % 2 == 0) 
+		if (num % 2 != 0) 
 		{
-			cantidadDeImpares = numero / 2;
+			contadorDeImpares++;
 		}
 
-		else 
-		{
-			cantidadDeImpares = (numero + 1) / 2;
-		}
-
-		document.getElementById('numero').value = "Cantidad de Impares: " + cantidadDeImpares;
-
-		respuesta = prompt("¿Desea ingresar otro numero?");
+		num--;
 	}
+
+	alert("La cantidad de numeros impares es: " + contadorDeImpares);	
 }
 
 function NumerosDivisibles()
 {
-	
+	ComenzarIngreso();
+	var cantidadDeDivisibles = 0;	
+	var divisibles = num / 2;
 
+	while (divisibles > 0 )
+	{
+		if (numero % divisibles == 0)  
+		{
+			if (divisibles > 1 && divisibles < 101) 
+			{
+				cantidadDeDivisibles++;
+				console.log(divisibles);
+			}
+		}
 
+		divisibles--;
+	}
+
+	alert("La cantidad de divisibles es: " + cantidadDeDivisibles);
+}
+
+function VerificarPrimo()
+{
+	ComenzarIngreso();
+	var cantidadDeDivisibles = 0;
+	var divisibles = 2;
+
+	while(divisibles <= num / 2)
+	{
+		if (num % divisibles == 0) 
+		{
+			cantidadDeDivisibles++;
+		}
+
+		divisibles++;
+	}
+
+	if (cantidadDeDivisibles != 0) 
+	{
+		alert("El numero no es primo");
+	}
+
+	else
+	{
+		alert("Es un numero primo");
+	}
+}
+
+function NumerosPrimos()
+{
+	ComenzarIngreso();
+	var contadorDeDivisibles = 0;
+	var contadorDePrimos = 0;
+	var divisibles;
+
+	while(num > 0)
+	{
+		divisibles = 2;
+		contadorDeDivisibles = 0;
+
+		while(divisibles <= num / 2)
+		{
+			if (num % divisibles == 0) 
+			{
+				contadorDeDivisibles++;
+			}
+
+			divisibles++;
+		}
+
+		if (contadorDeDivisibles == 0) 
+		{
+			contadorDePrimos++;
+			console.log(num);
+		}
+
+		num--;
+	}
+
+	alert("La cantidad de numeros primos es: " + contadorDePrimos);
 }
